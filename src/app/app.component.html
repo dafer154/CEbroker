@@ -1,3 +1,6 @@
+<app-navbar></app-navbar>
+<app-search></app-search>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,7 +23,7 @@
 
 <!-- Stylesheet
     ================================================== -->
-<!-- <link rel="stylesheet" type="text/css"  href="css/style.css"> -->
+<link rel="stylesheet" type="text/css"  href="/assets/css/style.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/nivo-lightbox/nivo-lightbox.css">
 <link rel="stylesheet" type="text/css" href="/assets/css/nivo-lightbox/default.css">
 <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700" rel="stylesheet">
@@ -35,28 +38,72 @@
     <![endif]-->
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
-<!-- Navigation
-    ==========================================-->
-<nav id="menu" class="navbar navbar-default navbar-fixed-top">
-  <div class="container">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-      <a class="navbar-brand page-scroll" href="#page-top">Touché</a> </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+<!-- My NavBar -->
+<div>
+  <nav  class="navbar navbar-expand-lg navbar-inverse bg-inverse">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/img/CEbroker.jpg" width="30" height="30" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#about" class="page-scroll">About</a></li>
-        <li><a href="#restaurant-menu" class="page-scroll">Menu</a></li>
-        <li><a href="#portfolio" class="page-scroll">Gallery</a></li>
-        <li><a href="#team" class="page-scroll">Chefs</a></li>
-        <li><a href="#call-reservation" class="page-scroll">Contact</a></li>
+        <li class="nav-item" >
+          <a class="nav-link" >Features</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" >Account</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" >Options</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" >Course search</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" >Organization</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" >About</a>
+        </li>
+        <li class="nav-item" >
+          <button type="button" class="btn btn-primary">7 day trial</button>
+        </li>
       </ul>
     </div>
-    <!-- /.navbar-collapse -->
-  </div>
-</nav>
+  </nav>
+</div>
+
+
+
+  <div class="container" style="min-height: 250px;">
+              <br>
+              <br>
+                <br>
+
+
+              <h1>
+                 How can we help you today?
+              </h1>
+
+  <form action="/customer/portal/articles/search" method="get" id="support-search" class="support-search-big">
+
+    <div class="outer">
+      <div class="inner">
+        <input type="text" id="q" name="q" maxlength="100" value="" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+         <input type="hidden" name="b_id" value="14000">
+        <div id="question-mask" class="question-big">Search for answers...</div>
+        <input type="submit" id="support-search-submit" value="Search">
+      </div>
+    </div>
+  </form>
+
+        </div>
+
+<!-- Navigation
+    ==========================================-->
 <!-- Header -->
 <header id="header">
   <div class="intro">
@@ -64,9 +111,10 @@
       <div class="container">
         <div class="row">
           <div class="intro-text">
-            <h1>Touché</h1>
-            <p>Restaurant / Coffee / Pub</p>
+            <h1>Course search</h1>
             <a href="#about" class="btn btn-custom btn-lg page-scroll">Discover Story</a> </div>
+            <p>Florida | Registered Nurse Florida / Pub</p>
+
         </div>
       </div>
     </div>

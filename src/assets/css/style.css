@@ -47,6 +47,20 @@ a:hover, a:focus {
 ul, ol {
 	list-style: none;
 }
+
+/* Styles David */
+
+#top-navbar {
+    height: 41px;
+    background-color: #555;
+    display: none;
+}
+
+#main-navbar {
+    padding: 4px 0;
+    background-color: #fff;
+}
+
 .clearfix:after {
 	visibility: hidden;
 	display: block;

@@ -1,10 +1,50 @@
-<div class="row">
-  <div class="col-lg-6">
-    <div class="input-group">
-      <input type="text" class="form-control">
-      <span class="input-group-btn ">
-        <button class="btn btn-default" type="button">Buscar</button>
-      </span>
+<div class="container top-30">
+
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card-columns">
+  <div class="card animated fadeIn fast" *ngFor="let principal of _CebrokerService.principalCourses; let i = index">
+      <div class="card-body">
+        <h4 class="card-title">{{principal.course.name}}</h4>
+        <p class="card-text"></p>
+        <p class="card-text"><small class="text-muted"></small></p>
+
+        <a class="btn btn-outline-primary">Ver mas Link...</a>
+      </div>
+    </div>
+</div>
     </div>
   </div>
 </div>
+
+
+<div class="container top-30">
+  <div class="row">
+
+    <div class="col-md-3">
+      <label for="word">Buscador de artistas</label>
+       <input [(ngModel)]="word" (keyup)="searchCourses()" type="text" name="word" placeholder="Search course..." class="form-control">
+        <hr>
+    </div>
+
+    <div class="col-md-9">
+      <!-- <ul>
+        <li *ngFor="let artista of _spotifyService.artistas">
+          {{artista.name}}
+        </li>
+        </ul>
+      -->
+        <div class="row">
+          <div class="col-md-3 text-center puntero"
+           *ngFor="let course of _CebrokerService.courses">
+            <p>
+              {{course.course.name}}
+            </p>
+          </div>
+        </div>
+
+    </div>
+
+  </div>
+
+  </div>

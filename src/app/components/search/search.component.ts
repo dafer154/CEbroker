@@ -11,7 +11,7 @@ export class SearchComponent implements OnInit {
 
 //For the search of courses
   word: string = "";
-  principal: any [] = [];
+  principal: any = [];
 
   //courses: any = [];
 

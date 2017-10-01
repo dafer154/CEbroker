@@ -7,7 +7,7 @@ import 'rxjs/add/operator/map';
 export class CebrokerService {
 
   principalCourses: any[] = [];
-  courses: any[]=[];
+  courses: any = {};
 
   //Principal courses
   private urlPrincipalCourses: string = "https://api.cebroker.com/v2/featuredCoursesProfession?profession=36";
@@ -39,7 +39,7 @@ getCourses(word:string){
     //Peticion URL => Observable o promesa
     return this.http.get( url).map(res =>{
                 //console.log(res.json().artists.items);
-                this.courses = res.json();
+                this.courses = res.json().items;
                 console.log(this.courses);
                 console.log("prueba de todos los cursos");
               } )

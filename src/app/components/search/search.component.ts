@@ -19,11 +19,8 @@ export class SearchComponent implements OnInit {
 
   ngOnInit() {
 
-    //this.principal = this._CebrokerService.getPrincipalCourses();
-
-    //console.log(this._CebrokerService.getPrincipalCourses());
     this.principalCourses();
-    
+
   }
 
 

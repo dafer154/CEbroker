@@ -11,7 +11,7 @@ export class SearchComponent implements OnInit {
 
 //For the search of courses
   word: string = "";
-  principal: any = [];
+  principalC = [];
 
   //courses: any = [];
 
@@ -21,7 +21,9 @@ export class SearchComponent implements OnInit {
 
     //this.principal = this._CebrokerService.getPrincipalCourses();
 
-    console.log(this._CebrokerService.getPrincipalCourses());
+    //console.log(this._CebrokerService.getPrincipalCourses());
+    this.principalCourses();
+    console.log("Observables");
   }
 
 
@@ -32,6 +34,7 @@ export class SearchComponent implements OnInit {
 
   searchCourses(){
     this._CebrokerService.getCourses(this.word).subscribe();
+
   }
 
 }

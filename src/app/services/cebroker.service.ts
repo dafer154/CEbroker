@@ -1,12 +1,12 @@
 import { Injectable } from '@angular/core';
 import {Http, Headers} from '@angular/http';
-
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/mergeMap';
 
 @Injectable()
 export class CebrokerService {
 
-  principalCourses: any[] = [];
+  principalC = [];
   courses: any = {};
 
   //Principal courses
@@ -15,33 +15,38 @@ export class CebrokerService {
 
   constructor(private http:Http) { }
 
-
 //Obtain the principal courses of CEbroker
 getPrincipalCourses(){
 
   let url = this.urlPrincipalCourses;
-  console.log("principales cursos");
 
-  return this.http.get(url).map(res=>{
-            this.principalCourses = res.json();
-            console.log(this.principalCourses);
-            console.log("-----");
-            return res.json();
-  })
+  return this.http.get(url).map(res =>{
+                this.principalC = res.json();
+                console.log("Principal", this.principalC);
+              })
 }
 
 getCourses(word:string){
 
-    //Autenticacion de spotify
     let url = this.allCourses;
     console.log(url);
 
-    //Peticion URL => Observable o promesa
+
     return this.http.get( url).map(res =>{
-                //console.log(res.json().artists.items);
-                this.courses = res.json().items;
-                console.log(this.courses);
-                console.log("prueba de todos los cursos");
+      console.log("Respuesta de ", res);
+      var items = res.json().items
+                if(!word){
+                  this.courses=items;
+                }
+                else{
+                  this.courses = [];
+                  items.map(item=>{
+                    if(item.course.name.toLowerCase().indexOf(word) > -1) {
+                      this.courses.push(item);
+                    }
+                  });
+                }
+
               } )
 }
 

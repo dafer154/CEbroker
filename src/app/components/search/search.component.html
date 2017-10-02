@@ -1,16 +1,20 @@
 <header class="business-header">
   <div class="container">
     <div class="row">
-      <div class="col-lg-12">
+      <div class="col-lg-12 text-center" >
         <br>
-        <span class="color-letter" for="word">Search courses</span>
-         <input [(ngModel)]="word" (keyup)="searchCourses()" type="text" name="word" placeholder="Search Courses..." class="form-control">
+        <span class="color-letter " for="word">Course search</span>
+        <div class="input-group">
+         <input [(ngModel)]="word" (keyup)="searchCourses()" type="text" name="word" placeholder="Search courses and providers" class="form-control text-center">
+         <span class="input-group-btn">
+             <button class="btn btn-default" type="button">Go!</button>
+         </span>
+       </div>
          <label class="color-letter">Florida | Registered nurse Florida</label>
       </div>
     </div>
   </div>
 </header>
-
 <div class="container">
 
   <!-- Page Heading -->
@@ -29,8 +33,6 @@
       <p>{{principal.coursePublication.totalHours}} Hrs-Computer-Based Training</p>
       <hr>
       <a class="btn btn-success" href="#">$30.00</a>
-        <hr>
-        <hr>
     </div>
   </div>
 </div>

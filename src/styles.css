@@ -30,8 +30,12 @@ body{
 }
 
 .search-size{
-  width: 10px;
-  height: 10px;
+  width: 60%;
+}
+
+.col-centered{
+    margin: 0 auto;
+    float: none;
 }
 
 body {

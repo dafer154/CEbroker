@@ -9,17 +9,15 @@ import {CebrokerService } from '../../services/cebroker.service';
 
 export class SearchComponent implements OnInit {
 
-//For the search of courses
   word: string = "";
   principalC = [];
-
-  //courses: any = [];
 
   constructor( private _CebrokerService: CebrokerService) { }
 
   ngOnInit() {
 
     this.principalCourses();
+    this.searchCourses();
 
   }
 

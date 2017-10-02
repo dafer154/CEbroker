@@ -23,7 +23,7 @@ export class SearchComponent implements OnInit {
 
     //console.log(this._CebrokerService.getPrincipalCourses());
     this.principalCourses();
-    console.log("Observables");
+    
   }
 
 

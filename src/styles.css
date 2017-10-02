@@ -12,6 +12,27 @@ body{
     display: none;
 }
 
+.background-div{
+  background-color: white;
+}
+
+.container-image {
+  padding: 10px;
+}
+
+.scale-image{
+  width:"100%";
+}
+
+.color-letter{
+  color: white;
+  text-align: center;
+}
+
+.search-size{
+  width: 10px;
+  height: 10px;
+}
 
 body {
     padding-top: 54px;

@@ -8,7 +8,7 @@ export class DomSurePipe implements PipeTransform {
 
   constructor(private domSanitizer:DomSanitizer){}
 
-  transform(url:string): any {
-    return this.domSanitizer.bypassSecurityTrustResourceUrl(url);
-  }
+  transform(value: string, url: string): any {
+      return this.domSanitizer.bypassSecurityTrustResourceUrl( url+value );
+    }
 }

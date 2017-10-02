@@ -3,8 +3,9 @@
     <div class="row">
       <div class="col-lg-12">
         <br>
-        <label class="center" for="word">Search courses</label>
+        <span class="color-letter" for="word">Search courses</span>
          <input [(ngModel)]="word" (keyup)="searchCourses()" type="text" name="word" placeholder="Search Courses..." class="form-control">
+         <label class="color-letter">Florida | Registered nurse Florida</label>
       </div>
     </div>
   </div>
@@ -13,28 +14,30 @@
 <div class="container">
 
   <!-- Page Heading -->
-  <h1 class="my-4">Page Heading
-    <small>Secondary Text</small>
-  </h1>
-
+  <h1 class="my-4">Featured courses</h1>
   <!-- Project One -->
-  <div class="row">
-    <div class="col-md-7">
+  <div class="row" *ngFor="let principal of _CebrokerService.principalC">
+    <div class="col-md-4 container-image">
       <a href="#">
-        <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
+        <img class="img-fluid rounded mb-3 mb-md-0 scale-image"  src="https://storage.cebroker.com/CEBroker/{{principal.coursePublication.course.featuredBanner}}" alt="">
       </a>
     </div>
-    <div class="col-md-5">
-      <h3>Project One</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
-      <a class="btn btn-primary" href="#">View Project</a>
+
+    <div class="col-md-8">
+      <h3>{{principal.coursePublication.course.name}}</h3>
+      <p>{{principal.coursePublication.course.provider.name}}</p>
+      <p>{{principal.coursePublication.totalHours}} Hrs-Computer-Based Training</p>
+      <hr>
+      <a class="btn btn-success" href="#">$30.00</a>
+        <hr>
+        <hr>
     </div>
   </div>
 </div>
 
 <div class="container top-30">
   <div class="row">
-    <div class="col-lg-4 col-sm-6 portfolio-item"
+    <div class="col-lg-4 col-sm-6 portfolio-item background-div"
     *ngFor="let course of _CebrokerService.courses">
         <div class="card h-100">
           <a href="#"><img class="card-img-top" src="/assets/img/CEbroker.jpg" alt=""></a>
@@ -42,7 +45,9 @@
             <h4 class="card-title">
               <a href="#">  {{course.course.name}} </a>
             </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
+            <p>{{course.course.provider.name}}</p>
+            <p>{{course.totalHours}} Hrs - {{course.course.deliveryMethod.description}} </p>
+            <a class="btn btn-success" href="#">${{course.price}}</a>
           </div>
         </div>
   </div>
